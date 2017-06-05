@@ -7,5 +7,6 @@ export PATH=$PATH:/usr/local/go/bin
 export GOPATH=`pwd`/goWorkspace
 go get -d k8s.io/kubernetes
 cd $GOPATH/src/k8s.io/kubernetes
-CGO_ENABLED=0 go install -a -installsuffix cgo std
-make
+CGO_ENABLED=0
+go install -a -installsuffix cgo std
+sudo make
